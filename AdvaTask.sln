@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvaTask.WebUI", "WebUI\AdvaTask.WebUI.csproj", "{3A122A66-FB3A-45C6-A161-ADAE7A56B874}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Data", "Infra.Data", "{901F301E-3E72-46F8-BBD6-CA03200BA263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvaTask.Infra.Data", "AdvaTask.Infra.Data\AdvaTask.Infra.Data.csproj", "{45159FCB-12F7-4DBD-B9C4-815670E99D2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +23,17 @@ Global
 		{3A122A66-FB3A-45C6-A161-ADAE7A56B874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A122A66-FB3A-45C6-A161-ADAE7A56B874}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A122A66-FB3A-45C6-A161-ADAE7A56B874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45159FCB-12F7-4DBD-B9C4-815670E99D2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45159FCB-12F7-4DBD-B9C4-815670E99D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45159FCB-12F7-4DBD-B9C4-815670E99D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45159FCB-12F7-4DBD-B9C4-815670E99D2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3A122A66-FB3A-45C6-A161-ADAE7A56B874} = {A47D3720-FA80-425F-B214-D3D5FEDB4F22}
+		{45159FCB-12F7-4DBD-B9C4-815670E99D2F} = {901F301E-3E72-46F8-BBD6-CA03200BA263}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A11ABA6B-6F45-4049-902E-6F6F5F20B432}
