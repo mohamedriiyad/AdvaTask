@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{ED15B252-E2FB-419A-9A3E-87C12186F275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{3A122A66-FB3A-45C6-A161-ADAE7A56B874}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvaTask.WebUI", "WebUI\AdvaTask.WebUI.csproj", "{3A122A66-FB3A-45C6-A161-ADAE7A56B874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
