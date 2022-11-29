@@ -1,13 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AdvaTask.Domain.Models
 {
     public class Department : BaseEntity
     {
-        [Required]
         public string Name { get; set; }
-        public int ManagerId { get; set; }
 
         public Employee Manager { get; set; }
+        public List<Employee> Employees { get; set; }
     }
 }

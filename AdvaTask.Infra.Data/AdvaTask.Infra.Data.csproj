@@ -11,6 +11,38 @@
     <Compile Remove="Migrations\20221129115715_AddEmployeesTable.Designer.cs" />
     <Compile Remove="Migrations\20221129122246_AddDepartmentsTable.cs" />
     <Compile Remove="Migrations\20221129122246_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129123355_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129123355_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129123643_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129123643_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129123819_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129123819_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129124000_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129124000_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129124855_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129124855_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129130545_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129130545_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129130707_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129130707_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129130820_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129130820_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129130931_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129130931_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129131015_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129131015_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129131824_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129131824_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129132103_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129132103_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129132156_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129132156_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129132616_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129132616_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129132829_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129132829_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129132958_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129132958_AddDepartmentsTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,10 +53,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdvaTask.Domain\AdvaTask.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
