@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AdvaTask.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AdvaTask.Infra.Data.Context
 {
@@ -7,7 +8,8 @@ namespace AdvaTask.Infra.Data.Context
         public AdvaContext(DbContextOptions<AdvaContext> options)
             : base(options)
         {
-
         }
+
+        public DbSet<Employee> Employees { get; set; }
     }
 }
