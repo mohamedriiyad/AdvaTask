@@ -11,6 +11,7 @@ namespace AdvaTask.Infra.Data.Context
         }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Department> Departments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -18,7 +19,7 @@ namespace AdvaTask.Infra.Data.Context
 
             modelBuilder.Entity<Department>()
                 .HasOne(d => d.Manager)
-                .WithMany()
+                .WithMany(m => m.Departments)
                 .HasForeignKey("ManagerId")
                 .OnDelete(DeleteBehavior.SetNull)
                 .Metadata.IsUnique = true;

@@ -22,6 +22,19 @@ namespace AdvaTask.Infra.Data.Repository
             return _context.Set<T>().ToList();
         }
 
+        public IEnumerable<T> GetAll(params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = _context.Set<T>();
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                    query = query.Include(include);
+                var w = query.ToList();
+                return w;
+            }
+            return null;
+        }
+
         public T GetById(int id)
         {
             return _context.Set<T>().Find(id);
@@ -44,7 +57,7 @@ namespace AdvaTask.Infra.Data.Repository
 
             if (includes != null)
                 foreach (var include in includes)
-                    query = query.Include(include);
+                    query = query.Include<T>(include);
 
             return query.Where(criteria).ToList();
         }

@@ -49,6 +49,12 @@
     <Compile Remove="Migrations\20221129141930_AddDepartmentsTabletest.Designer.cs" />
     <Compile Remove="Migrations\20221129142153_AddDepartmentsTabletest.cs" />
     <Compile Remove="Migrations\20221129142153_AddDepartmentsTabletest.Designer.cs" />
+    <Compile Remove="Migrations\20221129184259_ChangeManagerIdInDepartmentsToBeUniquesas.cs" />
+    <Compile Remove="Migrations\20221129184259_ChangeManagerIdInDepartmentsToBeUniquesas.Designer.cs" />
+    <Compile Remove="Migrations\20221129185143_ChangeManagerIdInDepartmentsToBeUniquesas.cs" />
+    <Compile Remove="Migrations\20221129185143_ChangeManagerIdInDepartmentsToBeUniquesas.Designer.cs" />
+    <Compile Remove="Migrations\20221129185827_ChangeManagerIdInDepartmentsToBeUniquesas.cs" />
+    <Compile Remove="Migrations\20221129185827_ChangeManagerIdInDepartmentsToBeUniquesas.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

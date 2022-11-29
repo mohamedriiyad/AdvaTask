@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AdvaTask.Application\AdvaTask.Application.csproj" />
     <ProjectReference Include="..\AdvaTask.Domain\AdvaTask.Domain.csproj" />
     <ProjectReference Include="..\AdvaTask.Infra.Data\AdvaTask.Infra.Data.csproj" />
   </ItemGroup>
