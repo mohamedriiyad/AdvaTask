@@ -15,17 +15,13 @@ namespace AdvaTask.Infra.Data.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             #region Department
-            //modelBuilder.Entity<Department>()
-            //    .HasIndex(d => d.ManagerId)
-            //    .IsUnique();
 
             modelBuilder.Entity<Department>()
                 .HasOne(d => d.Manager)
                 .WithMany()
-                .OnDelete(DeleteBehavior.SetNull);
-
-            //modelBuilder.Entity<Department>()
-            //    .Ignore(d => d.Manager);
+                .HasForeignKey("ManagerId")
+                .OnDelete(DeleteBehavior.SetNull)
+                .Metadata.IsUnique = true;
 
             modelBuilder.Entity<Department>()
                  .Property(d => d.Name)

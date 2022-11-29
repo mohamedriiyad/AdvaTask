@@ -43,6 +43,12 @@
     <Compile Remove="Migrations\20221129132829_AddDepartmentsTable.Designer.cs" />
     <Compile Remove="Migrations\20221129132958_AddDepartmentsTable.cs" />
     <Compile Remove="Migrations\20221129132958_AddDepartmentsTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129141559_AddDepartmentsTabletest.cs" />
+    <Compile Remove="Migrations\20221129141559_AddDepartmentsTabletest.Designer.cs" />
+    <Compile Remove="Migrations\20221129141930_AddDepartmentsTabletest.cs" />
+    <Compile Remove="Migrations\20221129141930_AddDepartmentsTabletest.Designer.cs" />
+    <Compile Remove="Migrations\20221129142153_AddDepartmentsTabletest.cs" />
+    <Compile Remove="Migrations\20221129142153_AddDepartmentsTabletest.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
