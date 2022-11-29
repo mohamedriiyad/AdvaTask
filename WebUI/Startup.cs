@@ -1,7 +1,7 @@
 using AdvaTask.Infra.Data.Context;
+using AdvaTask.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,6 +31,8 @@ namespace WebUI
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,6 +77,11 @@ namespace WebUI
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+        }
+
+        public static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
         }
     }
 }
