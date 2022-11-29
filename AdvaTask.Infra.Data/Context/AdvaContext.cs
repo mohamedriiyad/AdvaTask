@@ -21,7 +21,7 @@ namespace AdvaTask.Infra.Data.Context
                 .HasOne(d => d.Manager)
                 .WithMany(m => m.Departments)
                 .HasForeignKey("ManagerId")
-                .OnDelete(DeleteBehavior.SetNull)
+                .OnDelete(DeleteBehavior.NoAction)
                 .Metadata.IsUnique = true;
 
             modelBuilder.Entity<Department>()
