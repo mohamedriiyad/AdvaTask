@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AdvaTask.Domain.Interfaces;
+using AdvaTask.Infra.Data.Repository;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AdvaTask.Infra.IoC
 {
@@ -7,8 +9,7 @@ namespace AdvaTask.Infra.IoC
         public static void RegisterServices(IServiceCollection services)
         {
             //Application Layer
-
-            //Infra.Data Layer
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }
