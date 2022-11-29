@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20221129113825_AddEmployeesTable.Designer.cs" />
     <Compile Remove="Migrations\20221129115715_AddEmployeesTable.cs" />
     <Compile Remove="Migrations\20221129115715_AddEmployeesTable.Designer.cs" />
+    <Compile Remove="Migrations\20221129122246_AddDepartmentsTable.cs" />
+    <Compile Remove="Migrations\20221129122246_AddDepartmentsTable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
