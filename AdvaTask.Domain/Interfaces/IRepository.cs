@@ -8,7 +8,7 @@ namespace AdvaTask.Domain.Interfaces
     {
         T GetById(int id);
         IEnumerable<T> GetAll();
-        IEnumerable<T> GetAll(params Expression<Func<T, object>>[] includes);
+        IEnumerable<T> GetAll(string[] includes = null);
         T Find(Expression<Func<T, bool>> criteria, string[] includes = null);
         IEnumerable<T> FindAll(Expression<Func<T, bool>> criteria, string[] includes = null);
         T Add(T entity);

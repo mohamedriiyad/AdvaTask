@@ -28,7 +28,7 @@ namespace AdvaTask.Application.Services
 
         public IEnumerable<Employee> GetEmployeesWithManagersAndDepartments()
         {
-            return _unitOfWork.Employees.GetAll(e => e.Department);
+            return _unitOfWork.Employees.GetAll(new[] { "Department" });
         }
 
         public Employee GetEmployeeWithManagerAndDepartmentById(int id)

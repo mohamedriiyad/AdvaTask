@@ -59,6 +59,14 @@
     <Compile Remove="Migrations\20221129190325_ChangeManagerIdInDepartmentsToBeUniquesas.Designer.cs" />
     <Compile Remove="Migrations\20221129190620_UpdateRelationshipBetweenEmployeesAndDepartments.cs" />
     <Compile Remove="Migrations\20221129190620_UpdateRelationshipBetweenEmployeesAndDepartments.Designer.cs" />
+    <Compile Remove="Migrations\20221129191902_test.cs" />
+    <Compile Remove="Migrations\20221129191902_test.Designer.cs" />
+    <Compile Remove="Migrations\20221129192236_test.cs" />
+    <Compile Remove="Migrations\20221129192236_test.Designer.cs" />
+    <Compile Remove="Migrations\20221129192557_test.cs" />
+    <Compile Remove="Migrations\20221129192557_test.Designer.cs" />
+    <Compile Remove="Migrations\20221129193145_RevertToUpdateRelationshipBetweenEmployeesAndDepartments.cs" />
+    <Compile Remove="Migrations\20221129193145_RevertToUpdateRelationshipBetweenEmployeesAndDepartments.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

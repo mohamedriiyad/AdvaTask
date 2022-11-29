@@ -22,7 +22,7 @@ namespace AdvaTask.Infra.Data.Repository
             return _context.Set<T>().ToList();
         }
 
-        public IEnumerable<T> GetAll(params Expression<Func<T, object>>[] includes)
+        public IEnumerable<T> GetAll(string[] includes = null)
         {
             IQueryable<T> query = _context.Set<T>();
             if (includes != null)
