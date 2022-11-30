@@ -48,5 +48,15 @@ namespace AdvaTask.WebUI.Controllers
             return Ok();
         }
 
+        [HttpDelete("delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            var employee = _employeeService.GetEmployee(id);
+            if (employee == null)
+                return NotFound();
+
+            _employeeService.DeleteEmployee(employee);
+            return Ok();
+        }
     }
 }
