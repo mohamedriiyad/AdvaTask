@@ -12,5 +12,6 @@ namespace AdvaTask.Application.Interfaces
         IEnumerable<Department> GetDepartments();
         void UpdateDepartment(Department department);
         void DeleteDepartment(Department department);
+        bool IsDepartmentManagerExists(int id);
     }
 }

@@ -43,5 +43,8 @@ namespace AdvaTask.Application.Services
             _unitOfWork.Departments.Update(department);
             _unitOfWork.Complete();
         }
+
+        public bool IsDepartmentManagerExists(int id) => _unitOfWork.Departments
+            .Find(d => d.ManagerId == id) == null ? false : true;
     }
 }

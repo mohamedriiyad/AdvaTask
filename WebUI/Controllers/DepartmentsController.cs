@@ -27,9 +27,12 @@ namespace AdvaTask.WebUI.Controllers
         [HttpPost("create")]
         public IActionResult Create(AddDepartmentDTO departmentDTO) 
         {
-            if (!ModelState.IsValid)
-                return BadRequest();
+            if (!ModelState.IsValid || departmentDTO.ManagerId == 0)
+                return BadRequest("Incorrect data entered!");
 
+            if (_departmentService.IsDepartmentManagerExists(departmentDTO.ManagerId))
+                return BadRequest("There is a department with this Manager!");
+            
             var department = _mapper.Map<Department>(departmentDTO);
             _departmentService.AddDepartment(department);
 
