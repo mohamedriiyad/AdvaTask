@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
 import { Employee } from '../_models/employee';
+import { EmployeesService } from '../_services/employees.service';
 
 @Component({
   selector: 'app-employees',
@@ -10,14 +11,13 @@ import { Employee } from '../_models/employee';
 export class EmployeesComponent implements OnInit {
   employees: Employee[];
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Employee[]>(baseUrl + 'employees/get').subscribe(result => {
+  constructor(private employeesService: EmployeesService) { }
+
+  ngOnInit() {
+    this.employeesService.getEmployees().subscribe(result => {
       this.employees = result;
       console.log(this.employees)
     }, error => console.error(error));
-  }
-
-  ngOnInit() {
   }
 
 }
