@@ -12,6 +12,7 @@ namespace AdvaTask.Application.Mappings
         public GeneralProfile()
         {
             CreateMap<AddEmployeeDTO, Employee>();
+            CreateMap<EditEmployeeDTO, Employee>();
         }
     }
 }

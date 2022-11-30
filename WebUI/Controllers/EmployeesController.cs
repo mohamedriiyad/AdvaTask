@@ -25,7 +25,8 @@ namespace AdvaTask.WebUI.Controllers
         public IEnumerable<Employee> Get() =>_employeeService.GetEmployeesWithManagersAndDepartments();
 
         [HttpPost("create")]
-        public IActionResult Create(AddEmployeeDTO employeeDTO) {
+        public IActionResult Create(AddEmployeeDTO employeeDTO) 
+        {
             if (!ModelState.IsValid)
                 return BadRequest();
 
@@ -33,8 +34,19 @@ namespace AdvaTask.WebUI.Controllers
             _employeeService.AddEmployee(employee);
 
             return Ok();
-        } 
+        }
 
+        [HttpPut("edit")]
+        public IActionResult Edit(EditEmployeeDTO employeeDTO)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var employee = _mapper.Map<Employee>(employeeDTO);
+            _employeeService.UpdateEmployee(employee);
+
+            return Ok();
+        }
 
     }
 }
