@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AdvaTask.Application.DTOs
+namespace AdvaTask.Application.DTOs.Employees
 {
     public class EmployeeDTO
     {

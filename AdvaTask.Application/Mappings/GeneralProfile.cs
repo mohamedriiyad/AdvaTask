@@ -1,9 +1,6 @@
-﻿using AdvaTask.Application.DTOs;
+﻿using AdvaTask.Application.DTOs.Employees;
 using AdvaTask.Domain.Models;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AdvaTask.Application.Mappings
 {

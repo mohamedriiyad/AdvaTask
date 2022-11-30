@@ -1,4 +1,4 @@
-﻿using AdvaTask.Application.DTOs;
+﻿using AdvaTask.Application.DTOs.Employees;
 using AdvaTask.Application.Interfaces;
 using AdvaTask.Domain.Models;
 using AutoMapper;
