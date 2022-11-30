@@ -19,11 +19,13 @@ namespace AdvaTask.Application.Services
         public void AddEmployee(Employee employee)
         {
             _unitOfWork.Employees.Add(employee);
+            _unitOfWork.Complete();
         }
 
         public void DeleteEmployee(Employee employee)
         {
             _unitOfWork.Employees.Delete(employee);
+            _unitOfWork.Complete();
         }
 
         public IEnumerable<Employee> GetEmployeesWithManagersAndDepartments()
@@ -39,6 +41,7 @@ namespace AdvaTask.Application.Services
         public void UpdateEmployee(Employee employee)
         {
             _unitOfWork.Employees.Update(employee);
+            _unitOfWork.Complete();
         }
     }
 }

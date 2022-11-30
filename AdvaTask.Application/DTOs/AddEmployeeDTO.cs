@@ -5,11 +5,7 @@ using System.Text;
 
 namespace AdvaTask.Application.DTOs
 {
-    public class AddEmployeeDTO
+    public class AddEmployeeDTO : EmployeeDTO
     {
-        [Required]
-        public string Name { get; set; }
-        public int Salary { get; set; }
-        public int DepartmentId { get; set; }
     }
 }
