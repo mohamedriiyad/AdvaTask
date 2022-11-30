@@ -33,6 +33,11 @@ namespace AdvaTask.Application.Services
             return _unitOfWork.Employees.GetAll(new[] { "Department" });
         }
 
+        public Employee GetEmployee(int id)
+        {
+            return _unitOfWork.Employees.GetById(id);
+        }
+
         public Employee GetEmployeeWithManagerAndDepartmentById(int id)
         {
             return _unitOfWork.Employees.Find(e => e.Id == id, new[] { "Department" });
