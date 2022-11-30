@@ -15,6 +15,7 @@ namespace AdvaTask.Infra.IoC
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
 
             services.AddApplicationCore();
         }
