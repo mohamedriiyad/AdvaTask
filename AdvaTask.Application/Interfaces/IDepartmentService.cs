@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdvaTask.Application.Interfaces
 {
-    interface IDepartmentService
+    public interface IDepartmentService
     {
         void AddDepartment(Department department);
         Department GetDepartment(int id);
