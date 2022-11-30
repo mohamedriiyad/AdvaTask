@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdvaTask.WebUI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class BaseController : ControllerBase
     {

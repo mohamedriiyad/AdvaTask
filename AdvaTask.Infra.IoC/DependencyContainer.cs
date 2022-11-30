@@ -1,4 +1,5 @@
 ﻿using AdvaTask.Application.Interfaces;
+using AdvaTask.Application.IoC;
 using AdvaTask.Application.Services;
 using AdvaTask.Domain.Interfaces;
 using AdvaTask.Infra.Data.Repository;
@@ -15,7 +16,7 @@ namespace AdvaTask.Infra.IoC
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IEmployeeService, EmployeeService>();
 
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddApplicationCore();
         }
     }
 }
