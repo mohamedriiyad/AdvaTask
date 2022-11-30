@@ -2,7 +2,9 @@
 using AdvaTask.Application.Services;
 using AdvaTask.Domain.Interfaces;
 using AdvaTask.Infra.Data.Repository;
+using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace AdvaTask.Infra.IoC
 {
@@ -12,6 +14,8 @@ namespace AdvaTask.Infra.IoC
         {
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IEmployeeService, EmployeeService>();
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
         }
     }
 }
