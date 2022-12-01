@@ -13,6 +13,7 @@ import { EmployeesComponent } from './employees/employees/employees.component';
 import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.component';
 import { CreateEmployeeComponent } from './employees/create-employee/create-employee.component';
 import { DepartmentsListComponent } from './departments/departments-list/departments-list.component';
+import { CreateDepartmentComponent } from './departments/create-department/create-department.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DepartmentsListComponent } from './departments/departments-list/departm
     EmployeesComponent,
     EditEmployeeComponent,
     CreateEmployeeComponent,
-    DepartmentsListComponent
+    DepartmentsListComponent,
+    CreateDepartmentComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -37,7 +39,8 @@ import { DepartmentsListComponent } from './departments/departments-list/departm
       { path: 'employees', component: EmployeesComponent },
       { path: 'departments', component: DepartmentsListComponent },
       { path: 'edit-employee/:id', component: EditEmployeeComponent },
-      { path: 'create-employee', component: CreateEmployeeComponent }
+      { path: 'create-employee', component: CreateEmployeeComponent },
+      { path: 'create-department', component: CreateDepartmentComponent }
     ])
   ],
   providers: [],

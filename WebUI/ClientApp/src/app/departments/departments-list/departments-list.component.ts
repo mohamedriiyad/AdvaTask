@@ -19,7 +19,6 @@ export class DepartmentsListComponent implements OnInit {
   private getDepartments() {
     this.departmentService.getDepartments().subscribe(result => {
       this.departments = result;
-      console.log(this.departments)
     });
   }
 

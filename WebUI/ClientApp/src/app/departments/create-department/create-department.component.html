@@ -1,0 +1,21 @@
+<h4>Create Department</h4>
+<div class="row">
+  <div class="col-md-4">
+    <form>
+      <div class="text-danger"></div>
+      <div class="form-group">
+        <label class="control-label">Name</label>
+        <input [(ngModel)]="department.name" type="text" name="name" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label class="control-label">Manager</label>
+        <select [(ngModel)]="department.managerId" name="manager" class="form-control">
+          <option *ngFor="let manager of managers" value="{{manager?.id}}">{{manager?.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button (click)="create()" value="Save" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
