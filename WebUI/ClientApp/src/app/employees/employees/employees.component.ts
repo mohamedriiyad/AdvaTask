@@ -31,7 +31,7 @@ export class EmployeesComponent implements OnInit {
           alert('Deleted successfuly');
           this.getEmployees();
         }, error => {
-            alert('Somthing went wrong');
+            alert('This employee is a manager you should change it\'s Department manager first');
         });
     }
 }
