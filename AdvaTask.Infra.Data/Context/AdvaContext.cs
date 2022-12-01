@@ -39,7 +39,11 @@ namespace AdvaTask.Infra.Data.Context
             modelBuilder.Entity<Employee>()
                  .Property(e => e.Name)
                  .IsRequired();
+
+            modelBuilder.Entity<Employee>()
+                .HasData(new Employee[] { new Employee { Name = "Manager", Id = 1, Salary = 0 } });
             #endregion
         }
+        
     }
 }
