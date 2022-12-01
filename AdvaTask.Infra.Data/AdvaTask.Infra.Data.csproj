@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -67,6 +67,8 @@
     <Compile Remove="Migrations\20221129192557_test.Designer.cs" />
     <Compile Remove="Migrations\20221129193145_RevertToUpdateRelationshipBetweenEmployeesAndDepartments.cs" />
     <Compile Remove="Migrations\20221129193145_RevertToUpdateRelationshipBetweenEmployeesAndDepartments.Designer.cs" />
+    <Compile Remove="Migrations\20221201134323_MakeManagerIdNullable.cs" />
+    <Compile Remove="Migrations\20221201134323_MakeManagerIdNullable.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

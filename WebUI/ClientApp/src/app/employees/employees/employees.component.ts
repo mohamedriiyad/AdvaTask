@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
-import { error } from 'console';
 import { Employee } from '../../_models/employee';
 import { EmployeesService } from '../../_services/employees.service';
 

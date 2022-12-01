@@ -44,7 +44,7 @@ import { EditDepartmentComponent } from './departments/edit-department/edit-depa
       { path: 'edit-department/:id', component: EditDepartmentComponent },
       { path: 'create-employee', component: CreateEmployeeComponent },
       { path: 'create-department', component: CreateDepartmentComponent }
-    ])
+    ], { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
