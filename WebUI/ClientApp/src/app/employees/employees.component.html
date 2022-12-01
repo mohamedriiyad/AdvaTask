@@ -1,7 +1,5 @@
 <h1 id="tableLabel">Employees List</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
-
 <p *ngIf="!employees"><em>Loading...</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="employees">
@@ -11,14 +9,19 @@
       <th>Salary</th>
       <th>Department</th>
       <th>Manager</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let employee of employees">
       <td>{{ employee.name }}</td>
       <td>{{ employee.salary }}</td>
-      <td>{{ employee.department.name }}</td>
+      <td>{{ employee.department?.name }}</td>
       <td>{{ employee.department.manager?.name }}</td>
+      <td>
+        <button class="btn btn-primary" style="margin-right:10px" routerLink="/edit-employee/{{employee.id}}">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EmployeesComponent } from './employees/employees.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    EditEmployeeComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,7 +30,8 @@ import { EmployeesComponent } from './employees/employees.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'employees', component: EmployeesComponent }
+      { path: 'employees', component: EmployeesComponent },
+      { path: 'edit-employee/:id', component: EditEmployeeComponent }
     ])
   ],
   providers: [],
