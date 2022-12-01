@@ -27,10 +27,14 @@ export class CreateDepartmentComponent implements OnInit {
   }
 
   create() {
-    this.departmentSevice.createDepartment(this.department).subscribe(result => {
-      alert("Created Successfully");
-    }, error => {
+    if (this.department.managerId == null)
+      alert('Invalid Manager')
+    else {
+      this.departmentSevice.createDepartment(this.department).subscribe(result => {
+        alert("Created Successfully");
+      }, error => {
         alert(error.error);
-    });
+      });
+    }
   }
 }
