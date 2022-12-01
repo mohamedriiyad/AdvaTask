@@ -37,7 +37,10 @@ export class EditEmployeeComponent implements OnInit {
         });
     }
 
-    save() {
+  save() {
+      if (this.employee.departmentId == null)
+        this.employee.departmentId = 0
+
       this.employeeService.editEmployee(this.employee).subscribe(result => {
         alert("Edited Successfully");
       }, error => {

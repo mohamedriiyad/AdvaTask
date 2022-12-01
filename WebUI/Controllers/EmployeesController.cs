@@ -35,7 +35,6 @@ namespace AdvaTask.WebUI.Controllers
                 employee.DepartmentId = null;
 
             _employeeService.AddEmployee(employee);
-
             return Ok();
         }
 
@@ -46,8 +45,10 @@ namespace AdvaTask.WebUI.Controllers
                 return BadRequest();
 
             var employee = _mapper.Map<Employee>(employeeDTO);
+            if (employeeDTO.DepartmentId == 0)
+                employee.DepartmentId = null;
+            
             _employeeService.UpdateEmployee(employee);
-
             return Ok();
         }
 
