@@ -1,6 +1,7 @@
 <h1 id="tableLabel">Employees List</h1>
 
 <p *ngIf="!employees"><em>Loading...</em></p>
+<button class="btn btn-primary" routerLink="/create-employee">Create</button>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="employees">
   <thead>

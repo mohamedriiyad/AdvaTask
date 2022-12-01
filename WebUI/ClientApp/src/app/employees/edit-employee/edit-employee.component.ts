@@ -12,7 +12,7 @@ import { EmployeesService } from '../../_services/employees.service';
 })
 export class EditEmployeeComponent implements OnInit {
   id: number;
-  employee: Employee;
+  employee: Employee = { name: "", departmentId: null, id: 0, salary: null, department: null };
   departments: Department[];
 
   constructor(private route: ActivatedRoute,
