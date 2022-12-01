@@ -43,6 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\departments\" />
     <Folder Include="ClientApp\src\app\_services\" />
   </ItemGroup>
 

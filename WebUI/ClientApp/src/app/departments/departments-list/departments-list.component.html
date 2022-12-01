@@ -1,0 +1,24 @@
+<h1 id="tableLabel">Departments List</h1>
+
+<p *ngIf="!departments"><em>Loading...</em></p>
+<button class="btn btn-primary" routerLink="/create-department">Create</button>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="departments">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Manager</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let department of departments">
+      <td>{{ department.name }}</td>
+      <td>{{ department.manager.name }}</td>
+      <td>
+        <button class="btn btn-primary" style="margin-right:10px" routerLink="/edit-department/{{department.id}}">Edit</button>
+        <button class="btn btn-danger" (click)="delete(department.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
