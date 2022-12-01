@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
-import { Employee } from '../_models/employee';
-import { EmployeesService } from '../_services/employees.service';
+import { Employee } from '../../_models/employee';
+import { EmployeesService } from '../../_services/employees.service';
 
 @Component({
   selector: 'app-employees',

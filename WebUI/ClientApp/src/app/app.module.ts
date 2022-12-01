@@ -9,8 +9,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { EmployeesComponent } from './employees/employees.component';
-import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { EmployeesComponent } from './employees/employees/employees.component';
+import { EditEmployeeComponent } from './employees/edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
