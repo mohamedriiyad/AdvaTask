@@ -28,10 +28,14 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   create() {
+    if (this.employee.departmentId == null)
+      this.employee.departmentId = 0
+
     this.employeeService.createEmployee(this.employee).subscribe(result => {
         alert("Created Successfully");
     }, error => {
         alert("Somthing went wrong");
+        console.log(error)
     });
   }
 }
