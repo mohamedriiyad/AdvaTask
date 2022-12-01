@@ -21,7 +21,7 @@
       <td>{{ employee.department.manager?.name }}</td>
       <td>
         <button class="btn btn-primary" style="margin-right:10px" routerLink="/edit-employee/{{employee.id}}">Edit</button>
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger" (click)="delete(employee.id)">Delete</button>
       </td>
     </tr>
   </tbody>

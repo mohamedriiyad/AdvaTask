@@ -28,6 +28,6 @@ export class DepartmentService {
   }
 
   deleteDepartment(id: number) {
-    return this.http.delete(this.baseUrl + 'departments/edit/' + id);
+    return this.http.delete(this.baseUrl + 'departments/delete/' + id);
   }
 }
