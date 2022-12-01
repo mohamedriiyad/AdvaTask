@@ -11,14 +11,15 @@
         <label class="control-label">Salary</label>
         <input [(ngModel)]="employee.salary" type="text" name="salary" class="form-control" />
       </div>
-      <!--<div class="form-group">
-        <label class="control-label">Name</label>
-        <select class="form-control">
-          <option *ngFor="let department of " value="value">text</option>
-        </select>
-      </div>-->
       <div class="form-group">
-        <button (click)="log()" value="Save" class="btn btn-primary">SAve</button>
+        <label class="control-label">Name</label>
+        <select [(ngModel)]="employee.departmentId" name="department" class="form-control">
+          <option hidden value="employee.departmentId">{{employee.department?.name}}</option>
+          <option *ngFor="let department of departments"   value="{{department?.id}}">{{department?.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button (click)="save()" value="Save" class="btn btn-primary">Save</button>
       </div>
     </form>
   </div>
