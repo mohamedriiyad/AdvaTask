@@ -1,5 +1,6 @@
 ﻿using AdvaTask.Application.DTOs.Employees;
 using AdvaTask.Application.Interfaces;
+using AdvaTask.Domain.Interfaces;
 using AdvaTask.Domain.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,13 @@ namespace AdvaTask.WebUI.Controllers
     {
         private readonly IEmployeeService _employeeService;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public EmployeesController(IEmployeeService employeeService, IMapper mapper)
+        public EmployeesController(IEmployeeService employeeService, IMapper mapper, IUnitOfWork unitOfWork)
         {
             _employeeService = employeeService;
             _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet("get/{id}")]
@@ -35,6 +38,7 @@ namespace AdvaTask.WebUI.Controllers
                 employee.DepartmentId = null;
 
             _employeeService.AddEmployee(employee);
+            _unitOfWork.Complete();
             return Ok();
         }
 
@@ -49,6 +53,7 @@ namespace AdvaTask.WebUI.Controllers
                 employee.DepartmentId = null;
             
             _employeeService.UpdateEmployee(employee);
+            _unitOfWork.Complete();
             return Ok();
         }
 
@@ -60,6 +65,7 @@ namespace AdvaTask.WebUI.Controllers
                 return NotFound();
 
             _employeeService.DeleteEmployee(employee);
+            _unitOfWork.Complete();
             return Ok();
         }
     }
