@@ -14,7 +14,9 @@ namespace AdvaTask.WebUI.Controllers
         private readonly IMapper _mapper;
         private readonly IUnitOfWork _unitOfWork;
 
-        public EmployeesController(IEmployeeService employeeService, IMapper mapper, IUnitOfWork unitOfWork)
+        public EmployeesController(IEmployeeService employeeService,
+            IMapper mapper,
+            IUnitOfWork unitOfWork)
         {
             _employeeService = employeeService;
             _mapper = mapper;

@@ -1,5 +1,6 @@
 ﻿using AdvaTask.Application.DTOs.Departments;
 using AdvaTask.Application.Interfaces;
+using AdvaTask.Domain.Interfaces;
 using AdvaTask.Domain.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,15 @@ namespace AdvaTask.WebUI.Controllers
     {
         private readonly IDepartmentService _departmentService;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public DepartmentsController(IDepartmentService departmentService, IMapper mapper)
+        public DepartmentsController(IDepartmentService departmentService,
+            IMapper mapper,
+            IUnitOfWork unitOfWork)
         {
             _departmentService = departmentService;
             _mapper = mapper;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet("get/{id}")]
@@ -35,7 +40,7 @@ namespace AdvaTask.WebUI.Controllers
             
             var department = _mapper.Map<Department>(departmentDTO);
             _departmentService.AddDepartment(department);
-
+            _unitOfWork.Complete();
             return Ok();
         }
 
@@ -47,6 +52,7 @@ namespace AdvaTask.WebUI.Controllers
 
             var department = _mapper.Map<Department>(departmentDTO);
             _departmentService.UpdateDepartment(department);
+            _unitOfWork.Complete();
 
             return Ok();
         }
@@ -59,6 +65,7 @@ namespace AdvaTask.WebUI.Controllers
                 return NotFound();
 
             _departmentService.DeleteDepartment(department);
+            _unitOfWork.Complete();
             return Ok();
         }
     }
