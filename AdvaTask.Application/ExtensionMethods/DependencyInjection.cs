@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 
-namespace AdvaTask.Application.IoC
+namespace AdvaTask.Application.ExtensionMethods
 {
     public static class DependencyInjection
     {

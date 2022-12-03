@@ -1,11 +1,9 @@
 ﻿using AdvaTask.Application.Interfaces;
-using AdvaTask.Application.IoC;
+using AdvaTask.Application.ExtensionMethods;
 using AdvaTask.Application.Services;
 using AdvaTask.Domain.Interfaces;
 using AdvaTask.Infra.Data.Repository;
-using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 
 namespace AdvaTask.Infra.IoC
 {
