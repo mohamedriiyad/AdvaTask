@@ -19,13 +19,11 @@ namespace AdvaTask.Application.Services
         public void AddDepartment(Department department)
         {
             _unitOfWork.Departments.Add(department);
-            _unitOfWork.Complete();
         }
 
         public void DeleteDepartment(Department department)
         {
             _unitOfWork.Departments.Delete(department);
-            _unitOfWork.Complete();
         }
 
         public IEnumerable<Department> GetDepartments()
@@ -41,7 +39,6 @@ namespace AdvaTask.Application.Services
         public void UpdateDepartment(Department department)
         {
             _unitOfWork.Departments.Update(department);
-            _unitOfWork.Complete();
         }
 
         public bool IsDepartmentManagerExists(int id) => _unitOfWork.Departments
