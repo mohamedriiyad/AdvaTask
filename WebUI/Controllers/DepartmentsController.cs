@@ -39,7 +39,7 @@ namespace AdvaTask.WebUI.Controllers
                 return BadRequest("There is a department with this Manager!");
             
             var department = _mapper.Map<Department>(departmentDTO);
-            _departmentService.AddDepartment(department);
+            _unitOfWork.Departments.Add(department);
             _unitOfWork.Complete();
             return Ok();
         }
@@ -51,7 +51,7 @@ namespace AdvaTask.WebUI.Controllers
                 return BadRequest();
 
             var department = _mapper.Map<Department>(departmentDTO);
-            _departmentService.UpdateDepartment(department);
+            _unitOfWork.Departments.Update(department);
             _unitOfWork.Complete();
 
             return Ok();
@@ -64,7 +64,7 @@ namespace AdvaTask.WebUI.Controllers
             if (department == null)
                 return NotFound();
 
-            _departmentService.DeleteDepartment(department);
+            _unitOfWork.Departments.Delete(department);
             _unitOfWork.Complete();
             return Ok();
         }
